@@ -1,3 +1,14 @@
+Shelly version of DHT library. The Rx/Tx pin has been split into Rx and Tx pins due to Shelly 1/1PM Temperature addon. The reason is that this addon uses directional opto-isolators in order to isolate the high voltage and small signal sections.
+
+USAGE: dht.setup(<dht22_pinin>, <dht22_pinout>, DHTesp::); instead ht.setup(<dht22_pin>, DHTesp::);
+
+Just add input and output pins (Shelly using GPIO03 for input and GPIO00 for output for DHT).
+
+Tested only with DHT22, but the other DHTs should work, as well. (Remember adding a 4.7k pull-up resistor between signal and Vcc)
+
+NEVER, EVER, connect anything directly to Shelly 1/1PM's GPIOs. The GPIOs are directly connected to 230V mains. Instead, use the official temperature addon.
+
+
 DHTesp [![Build Status](https://github.com/beegee-tokyo/DHTesp/workflows/Arduino%20Library%20CI/badge.svg)](https://github.com/beegee-tokyo/DHTesp/actions)
 ===
 <!-- [![Build Status](https://travis-ci.com/beegee-tokyo/DHTesp.svg?branch=master)](https://travis-ci.com/beegee-tokyo/DHTesp) -->
