@@ -1,6 +1,6 @@
 Shelly version of DHT library. The Rx/Tx pin has been split into Rx and Tx pins due to Shelly 1/1PM Temperature addon. The reason is that this addon uses directional opto-isolators in order to isolate the high voltage and small signal sections.
 
-USAGE: dht.setup(<dht22_pinin>, <dht22_pinout>, DHTesp::<model>); instead ht.setup(<dht22_pin>, DHTesp::<model>);
+USAGE: dht.setup(<dht22_pinin>, <dht22_pinout>, DHTesp::DHT22); instead ht.setup(<dht22_pin>, DHTesp::DHT22);
 
 Just add input and output pins (Shelly using GPIO03 for input and GPIO00 for output for DHT).
 
